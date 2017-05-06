@@ -1,5 +1,3 @@
-import java.util.HashMap;
-
 /**
  * Created by Pavan Kumar on 29/04/2017.
  */
@@ -14,20 +12,19 @@ public class CountRepeatedChar {
                 count++;
             } else {
                 if (count > 1) {
-                    result.append( input.charAt(i - 1) + String.valueOf(count));
+                    result.append(input.charAt(i - 1) + String.valueOf(count));
+                } else {
+                    result.append(input.charAt(i - 1) + String.valueOf(count));
                 }
-//                else {
-//                    result.append(input.charAt(i - 1));
-//                }
                 count = 1;
             }
         }
 
         if (count > 1) {
-            result.append( input.charAt(i - 1) + String.valueOf(count));
+            result.append(input.charAt(i - 1) + String.valueOf(count));
         } else {
             result.append(input.charAt(i - 1) + String.valueOf(count));
         }
-        return  result.toString();
+        return result.toString();
     }
 }
